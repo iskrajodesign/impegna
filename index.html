@@ -153,7 +153,14 @@ footer img { height: 22px; width: auto; display: block; margin-bottom: 14px; }
 footer a { display: block; text-decoration: none; padding: 2px 0; }
 footer a:hover { color: var(--ink); text-decoration: underline; }
 
-@media (max-width: 1020px) {
+@media (max-width: 1120px) {
+  .bar-tel { display: none; }
+  .nav { gap: 22px; }
+  .hero .wrap { gap: 56px; }
+  .cols { gap: 48px; }
+  .pw::before { inset: 16px -16px -16px 16px; }
+}
+@media (max-width: 900px) {
   .hero .wrap, .cols, .cols.even { grid-template-columns: 1fr; gap: 56px; }
   .nav, .bar-tel { display: none; }
   .menu-btn { display: block; }
