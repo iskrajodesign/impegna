@@ -30,6 +30,7 @@
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html, body { background: var(--bg); }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 body { font-family: var(--body); color: var(--ink); font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
 a { color: inherit; }
 :focus-visible { outline: 3px solid #F6A46F; outline-offset: 3px; }
@@ -67,7 +68,7 @@ h2.t { font-size: clamp(28px, 3.4vw, 44px); line-height: 1.1; margin-bottom: 40p
 
 .rows { border-top: 1px solid var(--line); }
 .row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); gap: 40px; padding: 28px 0; border-bottom: 1px solid var(--line); align-items: start; }
-.row h3 { font-size: 22px; line-height: 1.2; font-weight: 700; }
+.row h3 { font-size: 22px; line-height: 1.2; font-weight: 700; overflow-wrap: break-word; }
 .row p { font-size: 17px; color: var(--mute); max-width: 36em; }
 .row p b { color: var(--ink); font-weight: 600; }
 .meta { font-size: 14px !important; margin-top: 8px; color: #85868C !important; }
@@ -75,7 +76,7 @@ h2.t { font-size: clamp(28px, 3.4vw, 44px); line-height: 1.1; margin-bottom: 40p
 
 .cols { display: grid; grid-template-columns: 1.1fr 1fr; gap: 80px; align-items: start; }
 .cols.even { grid-template-columns: 1fr 1fr; }
-.cols .row { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px; }
+.cols .row { grid-template-columns: minmax(0, 1fr); gap: 8px; }
 .prose p { font-size: 18px; max-width: 34em; color: var(--mute); }
 .prose p + p { margin-top: 18px; }
 .prose p b { color: var(--ink); font-weight: 600; }
@@ -167,7 +168,6 @@ footer a:hover { color: var(--ink); text-decoration: underline; }
   .nav.open { display: flex; flex-direction: column; gap: 0; position: absolute; top: 76px; left: 0; right: 0; background: var(--bg); border-bottom: 1px solid var(--line); padding: 8px 16px 16px; }
   .nav.open a { padding: 16px 0; border-bottom: 1px solid var(--line); font-size: 19px; color: var(--ink); }
   .row { grid-template-columns: 1fr; gap: 10px; }
-  .cols .row { grid-template-columns: 1fr; }
   footer .wrap { grid-template-columns: 1fr; }
 }
 @media (max-width: 640px) {
